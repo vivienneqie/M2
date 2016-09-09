@@ -1,0 +1,20 @@
+/**
+ * Grade file created by Brittany Tan
+ * CS 2340
+ * Creates an executable jar file for M2
+ */
+
+defaultTasks 'jar'
+
+apply plugin: 'java'
+
+dependencies {
+    compile files ('lib/resources.jar')
+}
+
+jar {
+    manifest {
+        attributes ('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': '../../lib/resources.jar')
+    }
+}
